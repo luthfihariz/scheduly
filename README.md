@@ -37,9 +37,9 @@ Docker for containerization to ensures the application runs the same way in ever
 
 ## Architecture Diagram
 
-[url=https://postimg.cc/KRZQgHn1][img]https://i.postimg.cc/KRZQgHn1/littlelives.png[/img][/url]
+![image](https://i.postimg.cc/KRZQgHn1/littlelives.png)
 
-[url=https://postimg.cc/vc3h7tz3][img]https://i.postimg.cc/vc3h7tz3/littlelives2.png[/img][/url]
+![image](https://i.postimg.cc/vc3h7tz3/littlelives2.png)
 
 ### Challenges
 

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node src/index.ts"
+    "start": "ts-node src/index.ts",
+    "run-migrations": "npx typeorm-ts-node-commonjs migration:run -d ./src/config/db.ts"
   },
   "keywords": [],
   "author": "",

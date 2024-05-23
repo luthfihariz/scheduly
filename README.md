@@ -1,8 +1,13 @@
 ## Getting Started
 
-### Prerequisites
-
 ### Set Up
+
+1. Clone this project
+2. Navigate to the project directory and run `pnpm install`
+3. Run docker compose up to provision PostgreSQL database
+4. Make sure all the database credentials is correct (see src/config/db.ts)
+5. Run DB Migrations `pnpm run-migrations`
+6. Run service `pnpm start`
 
 ## Architecture Proposal
 
@@ -13,10 +18,6 @@ Typescript with Node.js and Express.js for REST API.
 ### Database
 
 PostgreSQL will be used as the database. It's a powerful, open-source object-relational database system with a strong reputation for reliability and performance. It's also ACID-compliant which ensures data integrity, which we really need for appointment scheduling.
-
-### ORM
-
-TypeORM
 
 ### Deployment
 
@@ -32,15 +33,19 @@ Docker for containerization to ensures the application runs the same way in ever
 ### Entities
 
 1. Appointment: id, slotId
-2. Slot: id, startTime, endTime, availabilityt
+2. Slot: id, startTime, endTime, availability
 
 ## Architecture Diagram
+
+[url=https://postimg.cc/KRZQgHn1][img]https://i.postimg.cc/KRZQgHn1/littlelives.png[/img][/url]
+
+[url=https://postimg.cc/vc3h7tz3][img]https://i.postimg.cc/vc3h7tz3/littlelives2.png[/img][/url]
 
 ### Challenges
 
 - The architecture will be designed to support scalability and high availability. This can be achieved by using load balancers, auto-scaling, introducing cache on high read rates but low on update frequency.
 - To handle concurrent bookings and maintain data integrity, we can use database transactions and row-level locking.
-- Security vulnerabilities can be mitigated by using HTTPS, sanitizing user inputs, using JWT for authentication, and implementing rate limiting.
+- Security vulnerabilities can be mitigated by using HTTPS, sanitizing user inputs, using JWT for authentication, and implementing rate limiting (not yet developed)
 
 ### Potential Improvement
 
